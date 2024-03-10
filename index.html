@@ -21,7 +21,11 @@
                 <use xlink:href="#icon-heart-o"></use>
               </svg>
             </div>
-            
+            <a :href="currentTrack.url" target="_blank" class="player-controls__item">
+              <svg class="icon">
+                <use xlink:href="#icon-link"></use>
+              </svg>
+            </a>
             <div class="player-controls__item" @click="prevTrack">
               <svg class="icon">
                 <use xlink:href="#icon-prev"></use>
@@ -111,13 +115,6 @@
     </body>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
   <script>
-    /*
-design by Voicu Apostol.
-design: https://dribbble.com/shots/3533847-Mini-Music-Player
-I can't find any open music api or mp3 api so i have to download all musics as mp3 file.
-You can fork on github: https://github.com/muhammederdem/mini-player
-*/
-
 new Vue({
   el: "#app",
   data() {
